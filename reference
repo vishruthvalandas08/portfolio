@@ -1,0 +1,32 @@
+conda create -p venv python==3.8 -y
+conda activate venv/
+git init
+git add README.md
+git commit -m "First commit"
+git status
+git branch -M main
+git remote add origin https://github.com/username/reponame
+git remote -v
+
+for the first time:
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+to reset the previous credentials:open cmd 
+cmdkey /delete:git:https://github.com
+
+then press   
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+then 
+
+git push -u origin main
+
+create a file in GitHub and type .gitignore in that select python as template then commit the file
+
+git pull(vs code will get as the GitHub changes)
+
+setup.py
+
+
