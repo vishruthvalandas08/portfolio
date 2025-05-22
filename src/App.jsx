@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { About, Contact, Experience, Hero, Navbar, Tech, Works,AboutPage } from "./components";
 
@@ -9,7 +9,7 @@ const App = () => {
 
   return (
 
-    <BrowserRouter>
+    <Router>
     <div className='relative z-0 bg-primary'>
       <Navbar />
       <Routes>
@@ -54,7 +54,7 @@ const App = () => {
             }/>
       </Routes>
        </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
