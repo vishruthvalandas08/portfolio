@@ -1,50 +1,56 @@
-import {motion} from 'framer-motion';
-import {styles} from '../styles';
-import {ComputersCanvas} from './canvas'
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { RobotCanvas } from './canvas'
+
+
 
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}>
-      
+
         <div className='padding-right'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-[#915eff]'>Vishruth</span></h1>
-          <p className={`${styles.herosubText} mt-5 text-white-100`}>I develope Machine learning models, deep learning models <br className='sm:block hidden'/>
-          interfaces and web applications</p>
+          <p className={`${styles.herosubText} mt-5 text-white-100`}>I build and deploy machine learning & deep learning models,
+            <br className="sm:block hidden" />
+            craft intuitive web applications, and explore Generative AI.</p>
         </div>
-        
-        
-        
-       
-        <div className={`${styles.herosubText} flex flex-col justify-center items-center mt-5 padding-right-line`} style={{paddingTop:'200px'}}>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF] padding-left' />
-          <div className='h-1 sm:w-80 w-150 violet-gradient '></div>
-        </div>
-        </div>
-        <ComputersCanvas/>
-        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#about">
-            {/* <div className="w-[64px] h-[35px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.dev
-              animate={{
-                x:[0,24,0]
-              }}
-              transition={{
-                duration:1.5,
-                repeat:Infinity,
-                repeatType:'loop'
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"/> */}
-              {/* <RotatingIcon/> */}
-            {/* </div> */}
-          </a>
+      </div>
+      <RobotCanvas />
+      <div className="absolute xs:top-100 top-80 w-full flex justify-center items-center">
+  
+          <div className="absolute right-10 top-[5%] flex flex-col items-center">
+            {/* Pulsing Dot */}
+            <motion.div
+              animate={{ scale: [1, 1.4, 1] }}
+              transition={{ duration: 1.2, repeat: Infinity }}
+              className="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-indigo-500 shadow-xl mb-2"
+            />
 
-        </div>
-     
+            {/* Gradient Bar */}
+            <div className="w-1 h-40 bg-gradient-to-b from-pink-500 to-indigo-500 rounded mb-2" />
+
+            {/* Bouncing Inline SVG Arrow */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="w-6 h-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+              >
+                <path d="M12 16.5l-6-6 1.414-1.414L12 13.672l4.586-4.586L18 10.5z" />
+              </svg>
+            </motion.div>
+          </div>
+
+      </div>
+
     </section>
-    // <h1>Hekko0</h1>
-    
+
   )
 }
 
