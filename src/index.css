@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.canvas {
+  touch-action: auto!important;
+}
 * {
   margin: 0;
   padding: 0;
