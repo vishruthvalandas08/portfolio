@@ -78,21 +78,21 @@ const RobotCanvas = () => {
       camera={{ position: [0, 2, 10], fov: 35 }}
       gl={{ preserveDrawingBuffer: true }}
       style={{
-        touchAction: 'pan-y',
-    overscrollBehavior: 'auto'
+        touchAction: 'pan-y ',
+    overscrollBehavior: 'auto',
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          minPolarAngle={Math.PI / 10}    // vertical down limit
+          minPolarAngle={Math.PI / 2.2}    // vertical down limit
           maxPolarAngle={Math.PI / 2.2}   // vertical up limit
           minAzimuthAngle={-0.52}         // ~-30° horizontal
           maxAzimuthAngle={0.52}          // ~+30° horizontal
           autoRotate={false}            // disable auto-spin
           touches={{
-            ONE: THREE.TOUCH.DOLLY_PAN,
-            TWO: THREE.TOUCH_ROTATE,
+            ONE: THREE.TOUCH.PAN,
+            TWO: THREE.TOUCH.ROTATE,
           }}
         />
         <Robot width={width} />
