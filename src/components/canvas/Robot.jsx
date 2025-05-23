@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import "../../index.css";
+import * as THREE from 'three';
 
 const getSettings = (width, zoomedIn) => {
   if (width <= 500) {
@@ -76,6 +77,10 @@ const RobotCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [0, 2, 10], fov: 35 }}
       gl={{ preserveDrawingBuffer: true }}
+      style={{
+        touchAction: 'pan-y',
+    overscrollBehavior: 'auto'
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -85,6 +90,10 @@ const RobotCanvas = () => {
           minAzimuthAngle={-0.52}         // ~-30° horizontal
           maxAzimuthAngle={0.52}          // ~+30° horizontal
           autoRotate={false}            // disable auto-spin
+          touches={{
+            ONE: THREE.TOUCH.DOLLY_PAN,
+            TWO: THREE.TOUCH_ROTATE,
+          }}
         />
         <Robot width={width} />
       </Suspense>
