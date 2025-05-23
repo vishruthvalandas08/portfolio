@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 const getSettings = (width, zoomedIn) => {
   if (width <= 500) {
-    return { position: [0, -2, -1.5], scale: 2 };
+    return { position: [-1, -2, -3], scale: 1.5 };
   } else if (width <= 768) {
     return { position: [0, -1.5, -1], scale: 2.2 };
   } else if (width <= 1024) {
