@@ -1,7 +1,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { About, Contact, Experience, Hero, Navbar, Tech, Works,AboutPage } from "./components";
-
+import SplashCursor from './components/splashcolor'
 
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
     <Router>
     <div className='relative z-0 bg-primary'>
       <Navbar />
+      <SplashCursor />
       <Routes>
         <Route path="/" element={
          <>
