@@ -4,6 +4,7 @@ import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { vishruth_photo} from "../assets";
 import { SectionWrapper } from '../hoc'
+import StarBorder from './ButtonStar'
 const AboutPage = () => {
   return (
     <section className="text-white ">
@@ -29,6 +30,8 @@ const AboutPage = () => {
       <motion.div variants={textVariant()} className="text-center mb-8">
         <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
+      
+  
 
       {/* Description */}
       <motion.div
@@ -48,6 +51,7 @@ const AboutPage = () => {
           Outside of code, I enjoy exploring the latest in AI research, contributing to open source, and mentoring peers on best practices in full-stack and ML engineering.
         </p>
       </motion.div>
+      
     </section>
   );
 };

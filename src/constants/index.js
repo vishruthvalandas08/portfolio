@@ -191,6 +191,19 @@ import {
     image: Hitachi,
     source_code_link: "https://github.com/yourusername/llama3-sentiment-analysis",
   },
+  {
+  name: "Automated Gmail Summarization & Classification Agent",
+  description:
+    "Designed and implemented a production-ready email agent using FastAPI, Google OAuth2, and LangGraph to automate Gmail inbox management: fetching, summarizing with OpenAI GPT-3.5-turbo, classifying into dynamic labels, and organizing emails securely per user.",
+  tags: [
+    { name: "FastAPI", color: "blue-text-gradient" },
+    { name: "Google OAuth2", color: "green-text-gradient" },
+    { name: "LangGraph", color: "pink-text-gradient" },
+  ],
+  image: Hitachi,
+  source_code_link: "https://github.com/yourusername/gmail-classification-agent",
+},
+
 ];
   
   export { services, technologies, experiences, projects };

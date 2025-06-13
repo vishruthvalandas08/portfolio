@@ -7,6 +7,8 @@ import SplitText from "./splittext";
 
 
 const Hero = () => {
+
+  
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}>
@@ -58,6 +60,7 @@ const Hero = () => {
         </div>
       </div>
       <RobotCanvas />
+      
       <div className="absolute xs:top-100 top-80 w-full flex justify-center items-center">
 
         <div className="absolute right-10 top-[5%] flex flex-col items-center">

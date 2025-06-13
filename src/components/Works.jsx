@@ -50,8 +50,9 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p variants={fadeIn("","",0.1,1)}
         className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-          Developing and maintaining web applications using React.js and other related technologies.
-        </motion.p>
+          Developed and maintained responsive React.js/Next.js applications—including a Hitachi Vantara skill-management portal for 300+ employees, an NLP sentiment-analysis dashboard powered by a fine-tuned LLaMA model and GPT-3.5 via FastAPI, and a skin-lesion classification viewer with Grad-CAM heatmaps—delivering measurable improvements in user engagement, diagnostic confidence, and operational efficiency.
+
+           </motion.p>
       </div>
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project,index)=>(
